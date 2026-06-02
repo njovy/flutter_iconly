@@ -15,6 +15,15 @@ This package has made from Iconly v2.3 version. following sets are currently ava
 
 **note:** since Flutter does not support multicolor Icons, we can not support **Bulk** Icon set. but we are going to implement that in the future.
 
+## Compatibility
+`2.0.0` and above support **Flutter 3.10+** (Dart 3), including **Flutter 3.44**, where
+`IconData` became a `final` class and can no longer be subclassed. The icon sets are now
+plain `static const IconData` constants annotated with `@staticIconProvider`, so unused
+glyphs are tree-shaken from the bundled font in release builds. Standard usage
+(`Icon(IconlyLight.search)`) is unchanged — no migration is required.
+
+If you are still on Flutter `< 3.10`, pin `iconly: ^1.0.1`.
+
 ## installation:
 Add the following line to your `pubspec.yaml` file, under the `dependencies:` section:
 
@@ -25,7 +34,7 @@ dependencies:
 
 ## Usage 
 ``` dart
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:iconly/iconly.dart';
 
 class IconlyWidget extends StatelessWidget {
 

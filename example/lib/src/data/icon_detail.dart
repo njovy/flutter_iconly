@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-class IconlyDetail extends Comparable {
+class IconlyDetail implements Comparable<IconlyDetail> {
   IconlyDetail({
     required this.title,
     required this.type,
@@ -27,5 +27,5 @@ class IconlyDetail extends Comparable {
   int get hashCode => iconData.hashCode ^ title.hashCode ^ type.hashCode;
 
   @override
-  int compareTo(other) => title.compareTo(other.title);
+  int compareTo(IconlyDetail other) => title.compareTo(other.title);
 }

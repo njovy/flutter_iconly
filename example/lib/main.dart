@@ -20,7 +20,7 @@ class IconlyExampleApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: const ColorScheme.light(
           primary: Color(0xff4e54c8),
-          primaryVariant: Color(0xff8f94fb),
+          secondary: Color(0xff8f94fb),
         ),
       ),
       home: const HomePage(),
@@ -71,8 +71,8 @@ class _HomePageState extends State<HomePage> {
               );
           }
         },
-        label: Row(
-          children: const [
+        label: const Row(
+          children: [
             Icon(IconlyBroken.paper_plus),
             SizedBox(width: 4),
             Text('Copy'),
@@ -230,7 +230,7 @@ class SectionTitle extends StatelessWidget {
           alignment: AlignmentDirectional.topStart,
           child: Text(
             title,
-            style: Theme.of(context).textTheme.headline6?.copyWith(
+            style: Theme.of(context).textTheme.titleLarge?.copyWith(
                   fontWeight: FontWeight.bold,
                 ),
           ),
